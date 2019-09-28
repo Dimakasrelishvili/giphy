@@ -1,12 +1,8 @@
-M1TfEu4vJtgbPsXFdBBz1KFdOFVhEP92
+//M1TfEu4vJtgbPsXFdBBz1KFdOFVhEP92
 
 
 
-
-M1TfEu4vJtgbPsXFdBBz1KFdOFVhEP92
-
-
-var dogs= ""
+ var dogs= "dog"
 
 
 //javascript, jQuery
