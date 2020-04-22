@@ -1,4 +1,7 @@
-#topContainer {
+#navbar {
+background-color: rgb(152, 115, 238);
+font-size: larger;
+padding: 20px;
 
 }
 #gifff{
@@ -8,4 +11,14 @@
     padding: 5px;
 max-width: 200px;
 max-height: 200px;
+}
+.button{
+    margin:5px ;
+}
+#searchDiv{
+    float: right;
+    margin-right: 50px;
+}
+body{
+    background-color: rgba(163, 211, 230, 0.486);
 }
