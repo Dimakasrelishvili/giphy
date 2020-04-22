@@ -18,11 +18,16 @@ $(document).ready(function(){
   }
   // function to grab users input and push to topics list, reset current buttons and generate from new array 
   function submitClick (){
+        userInput = $("#fname").val().trim()
+    if (userInput!==""){
     event.preventDefault();
+    $("#gifff").empty();
     topics.push($("#fname").val().trim());
     topicArray()
+    $("#fname").val("");
+    }else{alert("add your topic")}
   }
-   
+  
   // takes the value of button was clicked and makes ajax call as well filters data creates html elements with attributes and appends to existing div
   
   $("body").delegate(".button", "click", function(){
@@ -33,7 +38,7 @@ $(document).ready(function(){
     $.ajax({
       datatype:"json",
       url: queryURL,
-     method: "GET"
+      method: "GET"
     }).then(function(response) {
       
       var result = response.data
@@ -73,13 +78,9 @@ $(document).ready(function(){
   
   //calling functions
   topicArray();
-  function resetButtons(){
-    $("#gifff").empty();
-    $("#fname").empty();
-  }
+ 
   
   $("#submit").on("click",function(event){
-    resetButtons()
     submitClick()
   });
   
