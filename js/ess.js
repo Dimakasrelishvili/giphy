@@ -1,11 +1,11 @@
 //M1TfEu4vJtgbPsXFdBBz1KFdOFVhEP92
 $(document).ready(function(){
   
-// array of topics, seeds
+  // array of topics, seeds
   var topics= ["dog","cat","tiger","mouse","squirel","bear"]
   // function to ganarate buttons to html for each topic and add attributes to it
   function topicArray() {
-      
+    
     for(i=0; i<topics.length; i++){
       
       var topButton = $("<button>")
@@ -18,6 +18,7 @@ $(document).ready(function(){
   }
   // function to grab users input and push to topics list, reset current buttons and generate from new array 
   function submitClick (){
+    event.preventDefault();
     topics.push($("#fname").val().trim());
     topicArray()
   }
@@ -77,7 +78,7 @@ $(document).ready(function(){
     $("#fname").empty();
   }
   
-  $("#submit").on("click",function(){
+  $("#submit").on("click",function(event){
     resetButtons()
     submitClick()
   });

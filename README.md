@@ -6,3 +6,5 @@ css
 html
 ajax method
 jquery and bootstrap 
+
+![picture](images/Untitled.pgn)
