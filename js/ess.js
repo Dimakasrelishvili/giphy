@@ -30,10 +30,13 @@ $(document).ready(function(){
     var queryURL = ("http://api.giphy.com/v1/gifs/search?q=" +$(this).attr("value")+"&api_key=M1TfEu4vJtgbPsXFdBBz1KFdOFVhEP92&limit=10");
     
     $.ajax({
+      datatype:"json",
       url: queryURL,
      method: "GET"
     }).then(function(response) {
+      
       var result = response.data
+      
       console.log(result)
       for (i=0; i<result.length; i++){
         var forGif = $("<img>")
